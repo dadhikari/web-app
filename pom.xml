@@ -13,8 +13,7 @@
     <url>http://Everest:18080/svn/web-app/</url>
   </scm>
 	<!-- This is a commented line-->
-	<!--this is a another comment-->
-  <dependencies>
+	<dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
