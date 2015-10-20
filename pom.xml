@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.danny</groupId>
+  <artifactId>web-app</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>web-app Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <scm>
+    <!--connection>scm:svn:http://somerepository.com/svn_repo/trunk</connection-->
+    <developerConnection>scm:svn:http://everest:18080/svn/web-app/</developerConnection>
+    <url>http://Everest:18080/svn/web-app/</url>
+  </scm>
+	<!-- This is a commented line-->
+	<!--this is a another comment-->
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <distributionManagement>
+    <repository>
+      <id>deployment</id>
+      <url>http://localhost:8081/nexus/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>deployment</id>
+      <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+  <build>
+    <finalName>web-app</finalName>
+	<plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-scm-plugin</artifactId>
+        <version>1.9.4</version>
+        <configuration>
+          <connectionType>Connection</connectionType>
+		  <basedir>${project.basedir}</basedir>
+		  <message>changes-made</message>
+		  <!--checkoutDirectory>${project.basedir}/src/gps</checkoutDirectory-->
+		  <workingDirectory>${project.basedir}\</workingDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  </project>
