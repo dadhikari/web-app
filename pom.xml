@@ -5,11 +5,11 @@
   <artifactId>web-app</artifactId>
   <packaging>war</packaging>
   <version>1.1-SNAPSHOT</version>
-  <name>Webapp</name>
+  <name>web-app</name>
   <url>http://maven.apache.org</url>
   
   <scm>
-    <!--connection>scm:svn:http://somerepository.com/svn_repo/trunk</connection-->
+    <connection>scm:git:https://github.com/dadhikari/web-app.git</connection>
     <developerConnection>scm:git:https://github.com/dadhikari/web-app.git</developerConnection>
     <!--url>http://Everest:18080/svn/web-app/</url-->
   </scm> 
@@ -35,17 +35,7 @@
   <build>
     <finalName>web-app</finalName>
 	        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
-                <configuration>
-                    <source>${jdk.version}</source>
-                    <target>${jdk.version}</target>
-                    <encoding>${project.build.sourceEncoding}</encoding>
-                </configuration>
-            </plugin>
-            <plugin>
+              <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.4.2</version>
@@ -55,13 +45,13 @@
                 <artifactId>maven-scm-plugin</artifactId>
                <version>1.9.4</version>
                  <configuration>
-                 <connectionType>developerConnection</connectionType>
+                 <connectionType>connection</connectionType>
 		                <basedir>${project.basedir}</basedir>
 		                 <message>changes-made</message>
 		                 <checkoutDirectory>${project.basedir}/src/gps</checkoutDirectory>
 		                <workingDirectory>${project.basedir}\</workingDirectory>
                </configuration>
-      </plugin>
+             </plugin>
     </plugins>
   </build>
   </project>
