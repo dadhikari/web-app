@@ -7,13 +7,14 @@
   <version>1.1-SNAPSHOT</version>
   <name>web-app Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  <!--
   <scm>
-    <!--connection>scm:svn:http://somerepository.com/svn_repo/trunk</connection-->
+    <connection>scm:svn:http://somerepository.com/svn_repo/trunk</connection>
     <developerConnection>scm:svn:http://everest:18080/svn/web-app/</developerConnection>
     <url>http://Everest:18080/svn/web-app/</url>
-  </scm>
-	<!-- This is a commented line-->
-	<dependencies>
+  </scm> 
+  -->
+		<dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
