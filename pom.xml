@@ -7,7 +7,7 @@
   <version>1.1-SNAPSHOT</version>
   <name>web-app</name>
   <url>http://maven.apache.org</url>
-  
+<!--This is a comment-->  
   <scm>
     <connection>scm:git:https://github.com/dadhikari/web-app.git</connection>
     <developerConnection>scm:git:https://github.com/dadhikari/web-app.git</developerConnection>
